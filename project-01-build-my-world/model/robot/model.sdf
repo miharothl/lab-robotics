@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name="my_robot">
+  <model name="robot">
     <static>false</static>
 
     <link name='chassis'>
