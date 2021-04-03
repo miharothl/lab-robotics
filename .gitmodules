@@ -1,0 +1,3 @@
+[submodule "lab-03-ros-nodes/src/simple_arm"]
+	path = lab-03-ros-nodes/src/simple_arm
+	url = https://github.com/miharothl/RoboND-simple_arm.git
