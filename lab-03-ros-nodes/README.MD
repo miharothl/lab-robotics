@@ -1,5 +1,8 @@
 # ROS Nodes Lab
 
+![Robot Arm](https://github.com/miharothl/lab-robotics/blob/master/lab-03-ros-nodes/images/robot-arm.png?raw=true)
+![Camera View](https://raw.githubusercontent.com/miharothl/lab-robotics/master/lab-03-ros-nodes/images/camera-view.png)
+
 ## Pull Repository and Start roslaunch 
 
 In terminal 1: pull repo and start roslaunch
