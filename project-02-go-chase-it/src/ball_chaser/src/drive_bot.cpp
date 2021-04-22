@@ -16,8 +16,7 @@ ros::Publisher motor_command_publisher;
 bool  handle_drive_request (ball_chaser::DriveToTarget::Request& req, ball_chaser::DriveToTarget::Response& res)
 {
 
-    // TODO: Delete the loop, move the code to the inside of the callback function and make the necessary changes to publish the requested velocities instead of constant values
- 
+    // DONE: Delete the loop, move the code to the inside of the callback function and make the necessary changes to publish the requested velocities instead of constant values
 
 //    while (ros::ok()) {
 //        ROS_INFO("loop");
@@ -34,8 +33,6 @@ bool  handle_drive_request (ball_chaser::DriveToTarget::Request& req, ball_chase
 //    }
 
         ROS_INFO("handle_drive_request");
-        //ROS_DEBUG("x = %d, this is bad", x);	
-        //ROS_DEBUG("z = %d, this is bad", z);	
 
         // Create a motor_command object of type geometry_msgs::Twist
         geometry_msgs::Twist motor_command;
@@ -44,13 +41,10 @@ bool  handle_drive_request (ball_chaser::DriveToTarget::Request& req, ball_chase
         motor_command.angular.z = (float) req.angular_z;
         // Publish angles to drive the robot
         motor_command_publisher.publish(motor_command);
-//
-//
-//        // Return a response message
-//        res.msg_feedback = "Linear.X is: " + std::to_string(motor_command.linear.x) + " Angular.z = " + std::to_string(motor_command.angular.z);
-//        //res.msg_feedback = "hi";
-//
-//        ROS_INFO_STREAM(res.msg_feedback);
+
+        // Return a response message
+        res.msg_feedback = "Linear.X is: " + std::to_string(motor_command.linear.x) + " Angular.z = " + std::to_string(motor_command.angular.z);
+        ROS_INFO_STREAM(res.msg_feedback);
 
   return true;
 }
@@ -68,10 +62,10 @@ int main(int argc, char** argv)
     // Inform ROS master that we will be publishing a message of type geometry_msgs::Twist on the robot actuation topic with a publishing queue size of 10
     motor_command_publisher = n.advertise<geometry_msgs::Twist>("/cmd_vel", 10);
 
-    // TODO: Define a drive /ball_chaser/command_robot service with a handle_drive_request callback function
+    // DONE: Define a drive /ball_chaser/command_robot service with a handle_drive_request callback function
     ros::ServiceServer service = n.advertiseService("/ball_chaser/command_robot", handle_drive_request);
 
-   // TODO: Handle ROS communication events
+   // DONE: Handle ROS communication events
     ros::spin();
 
     return 0;
