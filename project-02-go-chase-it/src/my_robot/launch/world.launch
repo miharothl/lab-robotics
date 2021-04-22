@@ -13,7 +13,7 @@
 
 
   <!-- World File -->
-  <arg name="world_file" default="$(find my_robot)/worlds/world.sdf"/>
+  <arg name="world_file" default="$(find my_robot)/worlds/rothl.world.sdf"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
