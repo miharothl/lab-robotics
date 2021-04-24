@@ -27,13 +27,17 @@ void drive_robot(float lin_x, float ang_z)
 // This callback function continuously executes and reads the image data
 void process_image_callback(const sensor_msgs::Image img)
 {
-        ROS_INFO("processing_image");
-
-	ROS_INFO("img.step: %i", img.step);
-	ROS_INFO("img.height: %i", img.height);
-	ROS_INFO("img.width: %i", img.width);
-
+    ROS_INFO("processing_image");
+    
+    ROS_INFO("img.step: %i", img.step);
+    ROS_INFO("img.height: %i", img.height);
+    ROS_INFO("img.width: %i", img.width);
+    
     int white_pixel = 255;
+
+    bool red_pixel = false;
+    bool green_pixel = false;
+    bool blue_pixel = false;
 
    // DONE: Loop through each pixel in the image and check if there's a bright white one
    // Then, identify if this pixel falls in the left, mid, or right side of the image
@@ -45,8 +49,12 @@ void process_image_callback(const sensor_msgs::Image img)
    int right_cutoff = img.step / 3 * 2;
 
    // Loop through each pixel in the image and check if its equal to the first one
-   for (int i = 0; i < img.height * img.step; i++) {
-       if (img.data[i] - white_pixel == 0) {
+   for (int i = 0; i < img.height * img.step; i=i+3) {
+
+       if ( (img.data[i] - white_pixel == 0) && (img.data[i+1] - white_pixel == 0) && (img.data[i+2] - white_pixel == 0) )
+
+       {
+           ROS_INFO("found white");
            found_ball = true;
 
            int row_position = i % img.step;
