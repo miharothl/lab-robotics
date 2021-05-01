@@ -1,3 +1,15 @@
 [submodule "lab-03-ros-nodes/src/simple_arm"]
 	path = lab-02-ros-nodes/src/simple_arm
 	url = https://github.com/miharothl/RoboND-simple_arm.git
+[submodule "lab-04-ros-ekf/src/robot_pose_ekf"]
+	path = lab-04-ros-ekf/src/robot_pose_ekf
+	url = https://github.com/udacity/robot_pose_ekf
+[submodule "lab-04-ros-ekf/src/turtlebot_simulator"]
+	path = lab-04-ros-ekf/src/turtlebot_simulator
+	url = https://github.com/turtlebot/turtlebot_simulator
+[submodule "lab-04-ros-ekf/src/odom_to_trajectory"]
+	path = lab-04-ros-ekf/src/odom_to_trajectory
+	url = https://github.com/udacity/odom_to_trajectory
+[submodule "lab-04-ros-ekf/src/turtlebot"]
+	path = lab-04-ros-ekf/src/turtlebot
+	url = https://github.com/turtlebot/turtlebot

@@ -1,0 +1,4 @@
+<launch>
+  <!--RVIZ-->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/ubuntu/scm/r/hub/lab-robotics/lab-04-ros-ekf/EKFLab.rviz"/>
+</launch>
