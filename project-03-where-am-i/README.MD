@@ -1,8 +1,7 @@
 # Where Am I
 
 Kidnapped robot
-![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the_robot_1.png?raw=true)
-
+![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the_robot.png?raw=true)
 
 ## Prerequisites
 
@@ -44,21 +43,17 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 ## Localization
 
-Kidnapped robot.
+Robot is kidnapped. Location is unknown.
 ![Kidnapped Robot Step 1](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_1.png?raw=true)
 
-Kidnapped robot - step 2 
+Kidnapped robot, explores... - step 1 
 ![Kidnapped Robot Step 2](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_2.png?raw=true)
 
-Kidnapped robot - step 3 
+Kidnapped robot, explores... - step 2 
 ![Kidnapped Robot Step 3](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_3.png?raw=true)
 
-
-Kidnapped robot - step 4 
+Kidnapped robot, explores... - step 3 
 ![Kidnapped Robot Step 4](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_4.png?raw=true)
-
 
 Kidnapped robot is localized.
 ![Kidnapped Robot Step 5](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_5.png?raw=true)
-
-
