@@ -13,3 +13,9 @@
 [submodule "lab-04-ros-ekf/src/turtlebot"]
 	path = lab-04-ros-ekf/src/turtlebot
 	url = https://github.com/turtlebot/turtlebot
+[submodule "project-03-where-am-i/src/pgm_map_creator"]
+	path = project-03-where-am-i/src/pgm_map_creator
+	url = https://github.com/udacity/pgm_map_creator.git
+[submodule "project-03-where-am-i/src/teleop_twist_keyboard"]
+	path = project-03-where-am-i/src/teleop_twist_keyboard
+	url = https://github.com/ros-teleop/teleop_twist_keyboard
