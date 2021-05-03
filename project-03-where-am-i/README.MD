@@ -12,12 +12,12 @@ Initialize sub-modules.
 
 ``` bash
 git submodule init
-submodule update
+git submodule update
 ```
 
 ## Launching
 
-Terminal 1:
+Start Gazebo and RViz in terminal 1:
 
 ``` bash
 catkin_make
@@ -25,15 +25,13 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-Terminal 2:
+Start localization in  terminal 2:
 ``` bash
-
-catkin_make
 source devel/setup.bash
 roslaunch my_robot amcl.launch
 ```
 
-Terminal 3:
+Start teleop in terminal 3:
 ``` bash
 catkin_make
 source devel/setup.bash
@@ -45,13 +43,13 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 Robot is kidnapped. Location is unknown.
 ![Kidnapped Robot Step 1](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_1.png?raw=true)
 
-Kidnapped robot, explores... - step 1 
+Kidnapped robot, explores. Step 1...
 ![Kidnapped Robot Step 2](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_2.png?raw=true)
 
-Kidnapped robot, explores... - step 2 
+Kidnapped robot, explores. Step 2...
 ![Kidnapped Robot Step 3](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_3.png?raw=true)
 
-Kidnapped robot, explores... - step 3 
+Kidnapped robot, explores. Step 3...
 ![Kidnapped Robot Step 4](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_4.png?raw=true)
 
 Kidnapped robot is localized.
