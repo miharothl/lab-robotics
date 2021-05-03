@@ -1,6 +1,5 @@
 # Where Am I
 
-Kidnapped robot
 ![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the_robot.png?raw=true)
 
 ## Prerequisites
