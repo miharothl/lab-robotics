@@ -1,7 +1,5 @@
 # Map My World
 
-![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the-robot.png?raw=true)
-
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
