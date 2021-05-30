@@ -18,7 +18,7 @@ git submodule update
 
 Follow https://github.com/introlab/rtabmap_ros#build-from-source
 
-## Launching
+## Launch
 
 Start Gazebo and RViz in terminal 1:
 
