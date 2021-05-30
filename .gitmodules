@@ -19,3 +19,9 @@
 [submodule "project-03-where-am-i/src/teleop_twist_keyboard"]
 	path = project-03-where-am-i/src/teleop_twist_keyboard
 	url = https://github.com/ros-teleop/teleop_twist_keyboard
+[submodule "project-04-map-my-world/src/rtabmap_ros"]
+	path = project-04-map-my-world/src/rtabmap_ros
+	url = https://github.com/introlab/rtabmap_ros.git
+[submodule "project-04-map-my-world/src/teleop_twist_keyboard"]
+	path = project-04-map-my-world/src/teleop_twist_keyboard
+	url = https://github.com/ros-teleop/teleop_twist_keyboard
