@@ -36,7 +36,6 @@ roslaunch my_robot mappling.launch
 
 Start teleop in terminal 3:
 ``` bash
-catkin_make
 source devel/setup.bash
 roslaunch my_robot teleop.launch
 ```
