@@ -50,10 +50,10 @@ rtabmap-databaseViewer db/rtabmap.db
 
 ## Localization
 
-Environment has to have clear features and geometric shapes to perform the mapping
+Environment has to have clear features and geometric shapes to perform the mapping.
 ![SLAM 1](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/the-world.png?raw=true)
 
-Robot, explores the world, SLAM in acction.
+Robot, explores the world, SLAM in action.
 ![SLAM 2](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-in-action.png?raw=true)
 
 Explore the mapping database.
