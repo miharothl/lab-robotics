@@ -3,7 +3,7 @@
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
-* [Git Large File Storage] (https://git-lfs.github.com/)
+* [Git Large File Storage](https://git-lfs.github.com/)
 
 ## Clone Repo
 
