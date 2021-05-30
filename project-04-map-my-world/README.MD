@@ -1,19 +1,24 @@
-# Where Am I
+# Map my World
 
-![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the_robot.png?raw=true)
+![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the-robot.png?raw=true)
 
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
+* [Git Large File Storage] (https://git-lfs.github.com/)
 
 ## Clone Repo
 
-Initialize sub-modules.
+Initialize sub-modules. 
 
 ``` bash
 git submodule init
 git submodule update
 ```
+
+## Install Rtabmap
+
+Follow https://github.com/introlab/rtabmap_ros#build-from-source
 
 ## Launching
 
@@ -25,10 +30,10 @@ source devel/setup.bash
 roslaunch my_robot world.launch
 ```
 
-Start localization in  terminal 2:
+Start SLAM mapping in  terminal 2:
 ``` bash
 source devel/setup.bash
-roslaunch my_robot amcl.launch
+roslaunch my_robot mappling.launch
 ```
 
 Start teleop in terminal 3:
@@ -38,23 +43,19 @@ source devel/setup.bash
 roslaunch my_robot teleop.launch
 ```
 
-
-
+Check SLAM mapping database
+``` bash
 rtabmap-databaseViewer db/rtabmap.db 
+```
 
 ## Localization
 
-Robot is kidnapped. Location is unknown.
-![Kidnapped Robot Step 1](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_1.png?raw=true)
+Environment has to have clear features and geometric shapes to perform the mapping
+![SLAM 1](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/the-world.png?raw=true)
 
-Kidnapped robot, explores. Step 1...
-![Kidnapped Robot Step 2](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_2.png?raw=true)
+Robot, explores the world, SLAM in acction.
+![SLAM 2](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-in-action.png?raw=true)
 
-Kidnapped robot, explores. Step 2...
-![Kidnapped Robot Step 3](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_3.png?raw=true)
+Explore the mapping database.
+![SLAM 3](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-features.png?raw=true)
 
-Kidnapped robot, explores. Step 3...
-![Kidnapped Robot Step 4](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_4.png?raw=true)
-
-Kidnapped robot is localized.
-![Kidnapped Robot Step 5](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_5.png?raw=true)
