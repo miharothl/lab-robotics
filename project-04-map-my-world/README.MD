@@ -1,3 +1,12 @@
+To Udacity Reviewer, please pull the repo from github. To pull database `db/rtabmap.db`
+you will need [Git Large File Storage](https://git-lfs.github.com/).
+
+``` bash
+git clone https://github.com/miharothl/lab-robotics.git
+git submodule init
+git submodule update
+```
+
 # Map My World
 
 ## Prerequisites
