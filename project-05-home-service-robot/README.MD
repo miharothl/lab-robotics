@@ -1,3 +1,22 @@
+
+rosrun map_server map_saver
+
+
+#### Add pick_objects package
+
+http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals
+
+cd src
+catkin_create_pkg pick_objects  move_base_msgs actionlib roscpp
+
+
+
+
+
+
+
+
+
 To Udacity Reviewer, please pull the repo from github. To pull database `db/rtabmap.db`
 you will need [Git Large File Storage](https://git-lfs.github.com/).
 
