@@ -1,1 +1,2 @@
 *.db filter=lfs diff=lfs merge=lfs -text
+project-05-home-service-robot/src/map/map.pgm filter=lfs diff=lfs merge=lfs -text
