@@ -80,9 +80,7 @@ cd ~/project-05-home-service-robot/src/map
 rosrun map_server map_saver
 ```
 
-rosrun map_server map_saver
-
-![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/map.pgm?raw=true)
+![MAP](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/map.png?raw=true)
 
 ## Packages
 
