@@ -38,6 +38,10 @@ catkin_make
 source devel/setup.bash
 ```
 
+In this project I used [turtlebot](https://www.turtlebot.com/).
+
+![BOT](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.gif?raw=true)
+
 ## Launch Scripts
 
 Prepare environment in terminal 1:
@@ -91,3 +95,15 @@ a 2-D occupancy grid map (like a building floorplan) from laser and pose data co
 Robot is navigating the environment using the [ROS Navigation Stack](http://wiki.ros.org/navigation), which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm.
 Using the algorithm the robot plans a trajectory from current to target position. The ROS navigation stack permits the robot to avoid any obstacle on its path
 by re-planning a new trajectory once your robot encounters them. 
+
+### Home Service
+
+Turtle bot in the environment.
+
+![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.gif?raw=true)
+
+SLAM and navigation in action.
+
+![SLAM](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/slam-and-navigation.gif?raw=true)
+
+
