@@ -3,6 +3,10 @@
 Environment has to have clear features and geometric shapes to perform the mapping.
 ![HOME_SERVICE](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true)
 
+<p align="center">
+  <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="200" />
+</p>
+
 
 ## Prerequisites
 
