@@ -2,12 +2,12 @@ Note for reviewer:
 
 Hi,
 
-We had issues before when submitting through this process as repo is using https://git-lfs.github.com/ and git submodles.
+We had issues before when submitting through the official process as repo is using https://git-lfs.github.com/ and git submodles.
 
 Please find the project at:
 
 ```
-git clone https://github.com/miharothl/lab-robotics
+git clone https://github.com/miharothl/lab-robotics.git
 git submodule init
 git submodule update
 
