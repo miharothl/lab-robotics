@@ -1,8 +1,5 @@
 # Home Service Robot
 
-Environment has to have clear features and geometric shapes to perform the mapping.
-![HOME_SERVICE](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true)
-
 <p align="center">
   <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="800" />
 </p>
@@ -40,7 +37,7 @@ source devel/setup.bash
 
 In this project I used [turtlebot](https://www.turtlebot.com/).
 
-![BOT](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.gif?raw=true)
+![BOT](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.png?raw=true)
 
 ## Launch Scripts
 
@@ -100,10 +97,10 @@ by re-planning a new trajectory once your robot encounters them.
 
 Turtle bot in the environment.
 
-![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.gif?raw=true)
+![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.png?raw=true)
 
 SLAM and navigation in action.
 
-![SLAM](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/slam-and-navigation.gif?raw=true)
+![SLAM](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/slam-and-navigation.png?raw=true)
 
 
