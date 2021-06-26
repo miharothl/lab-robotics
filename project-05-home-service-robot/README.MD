@@ -1,11 +1,15 @@
 # Home Service Robot
 
+Environment has to have clear features and geometric shapes to perform the mapping.
+![HOME_SERVICE](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true)
+
+
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
 * [Git Large File Storage](https://git-lfs.github.com/)
 
-## Repo and Dependencies
+## Repository and Dependencies
 
 Initialize sub-modules. 
 
@@ -30,9 +34,9 @@ catkin_make
 source devel/setup.bash
 ```
 
-## Launch
+## Launch Scripts
 
-In terminal 1:
+Prepare environment in terminal 1:
 
 ``` bash
 cd ~/project-05-home-service-robot
@@ -80,18 +84,6 @@ a 2-D occupancy grid map (like a building floorplan) from laser and pose data co
 
 ### Navigation
 
-Robot is navigating the environment using the ROS Navigation Stack, which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm.
+Robot is navigating the environment using the [ROS Navigation Stack](http://wiki.ros.org/navigation), which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm.
 Using the algorithm the robot plans a trajectory from current to target position. The ROS navigation stack permits the robot to avoid any obstacle on its path
 by re-planning a new trajectory once your robot encounters them. 
-
-## Localization
-
-Environment has to have clear features and geometric shapes to perform the mapping.
-![SLAM 1](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/the-world.png?raw=true)
-
-Robot, explores the world, SLAM in action.
-![SLAM 2](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-in-action.png?raw=true)
-
-Explore the mapping database.
-![SLAM 3](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-features.png?raw=true)
-
