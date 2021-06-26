@@ -230,7 +230,7 @@ int main( int argc, char** argv )
       LoadObject();
     }
     
-    sleep(5);
+    //sleep(5);
     dropoff_location_reached = true;
     if (dropoff_location_reached == true)
     {
