@@ -10,5 +10,5 @@ xterm  -e  "roslaunch turtlebot_rviz_launchers view_navigation.launch" &
 sleep 5
 
 xterm  -e  "rosparam load $(pwd)/../src/config/home_service.yaml;
-            rosrun add_markers add_markers" &
+            rosrun add_markers add_markers_test" &
 sleep 5
