@@ -6,11 +6,13 @@ We had issues before when submitting through this process as repo is using https
 
 Please find the project at:
 
+```
 git clone https://github.com/miharothl/lab-robotics
-
-cd project-05-home-service-robot
 git submodule init
 git submodule update
+
+cd project-05-home-service-robot
+```
 
 Thanks,
 Miha
