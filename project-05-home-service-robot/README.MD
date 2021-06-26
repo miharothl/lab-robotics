@@ -49,35 +49,40 @@ catkin_make
 source devel/setup.bash
 ```
 
-### Test Shell Script
+### Run Tests
 
 ``` bash
+# Test Launch Script
 ./scripts/test_launch.sh
-```
 
-### Test SLAM
-
-```
+# Test SLAM
 ./scripts/test_slam.sh
-```
 
-### Test Virtual Objects
-
-``` bash
+# Test Virtual Objects
 ./scripts/test_add_marker.sh
-```
 
-### Test Navigational Goal
-
-``` bash
+# Test Navigational Goal
 ./scripts/test_pick_objects.sh
-```
+``` 
 
-### Home Service Robot Demo
+### Run Home Service Robot Demo
 
 ``` bash
 ./scripts/home_service.sh
 ```
+
+## Map
+
+While testing the SLAM save the map and use it later during navigation.
+
+``` bash
+cd ~/project-05-home-service-robot/src/map
+rosrun map_server map_saver
+```
+
+rosrun map_server map_saver
+
+![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/map.pgm?raw=true)
 
 ## Packages
 
@@ -97,10 +102,8 @@ by re-planning a new trajectory once your robot encounters them.
 
 Turtle bot in the environment.
 
-![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.png?raw=true)
+![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/world.png?raw=true)
 
 SLAM and navigation in action.
 
 ![SLAM](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/slam-and-navigation.png?raw=true)
-
-
