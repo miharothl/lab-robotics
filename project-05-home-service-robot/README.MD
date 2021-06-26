@@ -1,39 +1,11 @@
-
-rosrun map_server map_saver
-
-
-#### Add pick_objects package
-
-http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals
-
-cd src
-catkin_create_pkg pick_objects  move_base_msgs actionlib roscpp
-
-
-
-
-
-
-
-
-
-To Udacity Reviewer, please pull the repo from github. To pull database `db/rtabmap.db`
-you will need [Git Large File Storage](https://git-lfs.github.com/).
-
-``` bash
-git clone https://github.com/miharothl/lab-robotics.git
-git submodule init
-git submodule update
-```
-
-# Map My World
+# Home Service Robot
 
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
 * [Git Large File Storage](https://git-lfs.github.com/)
 
-## Clone Repo
+## Repo and Dependencies
 
 Initialize sub-modules. 
 
@@ -42,36 +14,75 @@ git submodule init
 git submodule update
 ```
 
-## Install Rtabmap
+Install dependencies.
+```
+cd ~/project-05-home-service-robot
+catkin_make
+sudo apt-get update
 
-Follow https://github.com/introlab/rtabmap_ros#build-from-source
+source devel/setup.bash
+rosdep -i install gmapping
+rosdep -i install turtlebot_teleop
+rosdep -i install turtlebot_rviz_launchers
+rosdep -i install turtlebot_gazebo
+
+catkin_make
+source devel/setup.bash
+```
 
 ## Launch
 
-Start Gazebo and RViz in terminal 1:
+In terminal 1:
 
 ``` bash
+cd ~/project-05-home-service-robot
 catkin_make
 source devel/setup.bash
-roslaunch my_robot world.launch
 ```
 
-Start SLAM mapping in  terminal 2:
+### Test Shell Script
+
 ``` bash
-source devel/setup.bash
-roslaunch my_robot mappling.launch
+./scripts/test_launch.sh
 ```
 
-Start teleop in terminal 3:
-``` bash
-source devel/setup.bash
-roslaunch my_robot teleop.launch
+### Test SLAM
+
+```
+./scripts/test_slam.sh
 ```
 
-Check SLAM mapping database
+### Test Virtual Objects
+
 ``` bash
-rtabmap-databaseViewer db/rtabmap.db 
+./scripts/test_add_marker.sh
 ```
+
+### Test Navigational Goal
+
+``` bash
+./scripts/test_pick_objects.sh
+```
+
+### Home Service Robot Demo
+
+``` bash
+./scripts/home_service.sh
+```
+
+## Packages
+
+### Mapping & Localization 
+
+[Gmapping](http://wiki.ros.org/gmapping) package used to map and localize the robot in the environment. The gmapping package provides laser-based SLAM
+(Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create
+a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
+
+### Navigation
+
+Robot is navigating the environment using the ROS Navigation Stack, which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm.
+Using the algorithm the robot plans a trajectory from current to target position. The ROS navigation stack permits the robot to avoid any obstacle on its path
+by re-planning a new trajectory once your robot encounters them. 
 
 ## Localization
 
