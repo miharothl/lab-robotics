@@ -1,39 +1,16 @@
+# Home Service Robot
 
-rosrun map_server map_saver
+<p align="center">
+  <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="800" />
+</p>
 
-
-#### Add pick_objects package
-
-http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals
-
-cd src
-catkin_create_pkg pick_objects  move_base_msgs actionlib roscpp
-
-
-
-
-
-
-
-
-
-To Udacity Reviewer, please pull the repo from github. To pull database `db/rtabmap.db`
-you will need [Git Large File Storage](https://git-lfs.github.com/).
-
-``` bash
-git clone https://github.com/miharothl/lab-robotics.git
-git submodule init
-git submodule update
-```
-
-# Map My World
 
 ## Prerequisites
 
 * [ROS Development Rig](https://github.com/miharothl/nvidia-docker-novnc)
 * [Git Large File Storage](https://git-lfs.github.com/)
 
-## Clone Repo
+## Repository and Dependencies
 
 Initialize sub-modules. 
 
@@ -42,45 +19,89 @@ git submodule init
 git submodule update
 ```
 
-## Install Rtabmap
+Install dependencies.
+```
+cd ~/project-05-home-service-robot
+catkin_make
+sudo apt-get update
 
-Follow https://github.com/introlab/rtabmap_ros#build-from-source
+source devel/setup.bash
+rosdep -i install gmapping
+rosdep -i install turtlebot_teleop
+rosdep -i install turtlebot_rviz_launchers
+rosdep -i install turtlebot_gazebo
 
-## Launch
-
-Start Gazebo and RViz in terminal 1:
-
-``` bash
 catkin_make
 source devel/setup.bash
-roslaunch my_robot world.launch
 ```
 
-Start SLAM mapping in  terminal 2:
+In this project I used [turtlebot](https://www.turtlebot.com/).
+
+![BOT](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/turtlebot.png?raw=true)
+
+## Launch Scripts
+
+Prepare environment in terminal 1:
+
 ``` bash
+cd ~/project-05-home-service-robot
+catkin_make
 source devel/setup.bash
-roslaunch my_robot mappling.launch
 ```
 
-Start teleop in terminal 3:
+### Run Tests
+
 ``` bash
-source devel/setup.bash
-roslaunch my_robot teleop.launch
-```
+# Test Launch Script
+./scripts/test_launch.sh
 
-Check SLAM mapping database
+# Test SLAM
+./scripts/test_slam.sh
+
+# Test Virtual Objects
+./scripts/test_add_marker.sh
+
+# Test Navigational Goal
+./scripts/test_pick_objects.sh
+``` 
+
+### Run Home Service Robot Demo
+
 ``` bash
-rtabmap-databaseViewer db/rtabmap.db 
+./scripts/home_service.sh
 ```
 
-## Localization
+## Map
 
-Environment has to have clear features and geometric shapes to perform the mapping.
-![SLAM 1](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/the-world.png?raw=true)
+While testing the SLAM save the map and use it later during navigation.
 
-Robot, explores the world, SLAM in action.
-![SLAM 2](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-in-action.png?raw=true)
+``` bash
+cd ~/project-05-home-service-robot/src/map
+rosrun map_server map_saver
+```
 
-Explore the mapping database.
-![SLAM 3](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-features.png?raw=true)
+![MAP](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/map.png?raw=true)
 
+## Packages
+
+### Mapping & Localization 
+
+[Gmapping](http://wiki.ros.org/gmapping) package used to map and localize the robot in the environment. The gmapping package provides laser-based SLAM
+(Simultaneous Localization and Mapping), as a ROS node called slam_gmapping. Using slam_gmapping, you can create
+a 2-D occupancy grid map (like a building floorplan) from laser and pose data collected by a mobile robot.
+
+### Navigation
+
+Robot is navigating the environment using the [ROS Navigation Stack](http://wiki.ros.org/navigation), which is based on the Dijkstra's, a variant of the Uniform Cost Search algorithm.
+Using the algorithm the robot plans a trajectory from current to target position. The ROS navigation stack permits the robot to avoid any obstacle on its path
+by re-planning a new trajectory once your robot encounters them. 
+
+### Home Service
+
+Turtle bot in the environment.
+
+![WORLD](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/world.png?raw=true)
+
+SLAM and navigation in action.
+
+![SLAM](https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/slam-and-navigation.png?raw=true)
