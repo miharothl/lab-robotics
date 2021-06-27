@@ -1,7 +1,7 @@
 # Home Service Robot
 
 <p align="center">
-  <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="800" />
+  <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="1100" />
 </p>
 
 
