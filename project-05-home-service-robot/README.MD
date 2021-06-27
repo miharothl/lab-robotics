@@ -1,3 +1,24 @@
+Note for reviewer:
+
+Hi,
+
+We had issues before when submitting through the official process as repo is using https://git-lfs.github.com/ and git submodles.
+
+Please find the project at:
+
+```
+git clone https://github.com/miharothl/lab-robotics.git
+git submodule init
+git submodule update
+
+cd project-05-home-service-robot
+```
+
+Thanks,
+Miha
+
+
+
 # Home Service Robot
 
 <p align="center">
@@ -47,28 +68,29 @@ Prepare environment in terminal 1:
 cd ~/project-05-home-service-robot
 catkin_make
 source devel/setup.bash
+cd scripts
 ```
 
 ### Run Tests
 
 ``` bash
 # Test Launch Script
-./scripts/test_launch.sh
+./test_launch.sh
 
 # Test SLAM
-./scripts/test_slam.sh
+./test_slam.sh
 
 # Test Virtual Objects
-./scripts/test_add_marker.sh
+./test_add_marker.sh
 
 # Test Navigational Goal
-./scripts/test_pick_objects.sh
+./test_pick_objects.sh
 ``` 
 
 ### Run Home Service Robot Demo
 
 ``` bash
-./scripts/home_service.sh
+./home_service.sh
 ```
 
 ## Map
