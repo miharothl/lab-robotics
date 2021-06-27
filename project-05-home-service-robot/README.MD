@@ -1,24 +1,3 @@
-Note for reviewer:
-
-Hi,
-
-We had issues before when submitting through the official process as repo is using https://git-lfs.github.com/ and git submodles.
-
-Please find the project at:
-
-```
-git clone https://github.com/miharothl/lab-robotics.git
-git submodule init
-git submodule update
-
-cd project-05-home-service-robot
-```
-
-Thanks,
-Miha
-
-
-
 # Home Service Robot
 
 <p align="center">
