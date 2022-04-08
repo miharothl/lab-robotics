@@ -3,22 +3,31 @@
 
 ## TLDR
 
-* Build a world
-
+1. Build a world
+[(details)](./project-01-build-my-world)
 ![SLAM 1](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/the-world.png?raw=true)
 
-[Details](./project-04-map-my-world/images/README.md)
+2. Build a robot
+[(details)](./project-01-build-my-world)
 
+![The Robot](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/the_robot.png?raw=true)
 
+3. Kidnapped robot (Monte Carlo Localization)
+[(details)](./project-03-where-am-i)
 
-* Build a robot
+![Kidnapped Robot Step 2](https://github.com/miharothl/lab-robotics/blob/master/project-03-where-am-i/images/kidnapped_robot_2.png?raw=true)
 
-* Kidnapped robot (Monte Carlo Localization)
+4. Map my world (SLAM - Simultaneous localization and mapping)
+[(details)](./project-04-map-my-world)
 
-* Map my world (SLAM - Simultaneous localization and mapping)
+![SLAM 2](https://github.com/miharothl/lab-robotics/blob/master/project-04-map-my-world/images/slam-in-action.png?raw=true)
 
-* Home Automation
+5. Home Automation
+[(details)](./project-05-home-service-robot)
 
+<p align="center">
+  <img src="https://github.com/miharothl/lab-robotics/blob/master/project-05-home-service-robot/images/home-service.gif?raw=true" width="1100" />
+</p>
 
 ## 3
 
